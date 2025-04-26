@@ -15,7 +15,6 @@ int main() {
     int n;
     bool validInput = false;
     
-    // Input validation for n
     do {
         cout << "Nhap so luong sinh vien: ";
         if (cin >> n) {
@@ -34,7 +33,6 @@ int main() {
     SinhVien dsSV[n];
     cin.ignore();
     
-    // Manual input for each student
     for(int i = 0; i < n; i++) {
         cout << "\nNhap thong tin sinh vien thu " << i + 1 << ":\n";
         cout << "Ten: ";
@@ -48,7 +46,6 @@ int main() {
         cin.ignore();
     }
     
-    // Calculate and display average scores
     cout << "\nDanh sach sinh vien va diem trung binh:\n";
     cout << setprecision(2) << fixed;
     
@@ -58,7 +55,6 @@ int main() {
              << ", Diem TB: " << dsSV[i].diemTB << endl;
     }
     
-    // Display students with average score >= 8
     cout << "\nSinh vien co diem trung binh >= 8:\n";
     bool found = false;
     

@@ -6,14 +6,13 @@ int main() {
     int n;
     bool validInput = false;
     
-    // Input validation for n
     do {
         cout << "Nhap so phan tu n: ";
         if (cin >> n) {
             if (n > 0) {
                 validInput = true;
             } else {
-                cout << "n phai lon hon 0. Vui long nhap lai!\n";
+                cout << "n > 0. Vui long nhap lai!\n";
             }
         } else {
             cout << "Vui long nhap so nguyen!\n";
@@ -29,14 +28,11 @@ int main() {
         cout << "arr[" << i << "] = ";
         cin >> arr[i];
     }
-    
-    // Using set to count unique values
     set<int> uniqueValues;
     for(int i = 0; i < n; i++) {
         uniqueValues.insert(arr[i]);
     }
     
-    // Output result
     cout << "So luong gia tri phan biet trong mang: " << uniqueValues.size();
     
     return 0;
